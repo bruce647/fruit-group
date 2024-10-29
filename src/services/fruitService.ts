@@ -1,4 +1,3 @@
-import axios from "axios";
 import { Fruit } from "../types/Fruit";
 
 /**
