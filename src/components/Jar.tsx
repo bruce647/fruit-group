@@ -1,14 +1,7 @@
 import React from "react";
-import {
-  PieChart,
-  Pie,
-  Cell,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { Fruit } from "../types/Fruit";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 interface JarProps {
@@ -106,7 +99,6 @@ const Jar: React.FC<JarProps> = ({ jar, className = "" }) => {
                   cx,
                   cy,
                   midAngle,
-                  innerRadius,
                   outerRadius,
                   percentage,
                   name,
@@ -130,7 +122,7 @@ const Jar: React.FC<JarProps> = ({ jar, className = "" }) => {
                   ) : null;
                 }}
               >
-                {pieData.map((entry, index) => (
+                {pieData.map((_, index) => (
                   <Cell
                     key={`cell-${index}`}
                     fill={colors[index % colors.length]}

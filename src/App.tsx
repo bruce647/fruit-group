@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getFruits } from "./services/fruitService";
 import { Fruit } from "./types/Fruit";
 import Jar from "./components/Jar";

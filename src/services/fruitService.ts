@@ -1,9 +1,6 @@
 import axios from "axios";
 import { Fruit } from "../types/Fruit";
 
-const API_URL =
-  "https://wcz3qr33kmjvzotdqt65efniv40kokon.lambda-url.us-east-2.on.aws/";
-
 /**
  * Fetches a list of fruits from the local JSON data file.
  *

@@ -62,11 +62,11 @@ const FruitList: React.FC<FruitListProps> = ({
       addFruitToJar(fruit);
       setRecentlyAdded((prev) => {
         const newSet = new Set(prev);
-        newSet.add(fruit.id);
+        newSet.add(fruit.name);
         setTimeout(() => {
           setRecentlyAdded((current) => {
             const updated = new Set(current);
-            updated.delete(fruit.id);
+            updated.delete(fruit.name);
             return updated;
           });
         }, 500);
@@ -154,7 +154,7 @@ const FruitList: React.FC<FruitListProps> = ({
                     transition-all duration-200
                     hover:bg-gray-50 dark:hover:bg-gray-800
                     ${
-                      recentlyAdded.has(fruit.id)
+                      recentlyAdded.has(fruit.name)
                         ? "bg-green-50 dark:bg-green-900/20"
                         : ""
                     }

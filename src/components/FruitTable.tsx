@@ -73,11 +73,11 @@ const FruitTable: React.FC<FruitTableProps> = ({
       addFruitToJar(fruit);
       setRecentlyAdded((prev) => {
         const newSet = new Set(prev);
-        newSet.add(fruit.id);
+        newSet.add(fruit.name);
         setTimeout(() => {
           setRecentlyAdded((current) => {
             const updated = new Set(current);
-            updated.delete(fruit.id);
+            updated.delete(fruit.name);
             return updated;
           });
         }, 500);
@@ -159,7 +159,7 @@ const FruitTable: React.FC<FruitTableProps> = ({
                     key={fruit.id}
                     className={cn(
                       "transition-colors",
-                      recentlyAdded.has(fruit.id) &&
+                      recentlyAdded.has(fruit.name) &&
                         "bg-green-50/50 dark:bg-green-900/20",
                       "hover:bg-gray-50 dark:hover:bg-gray-800/50"
                     )}
