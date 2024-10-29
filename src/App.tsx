@@ -48,7 +48,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col w-screen bg-gray-100 p-8">
+    <div className="flex flex-col w-screen min-h-screen bg-gray-100 p-8">
       <div className="w-full px-4 py-8">
         <FruitJarDialog
           isOpen={isLimitReached}
