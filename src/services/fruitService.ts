@@ -9,8 +9,9 @@ import { Fruit } from "../types/Fruit";
  */
 export const getFruits = async (): Promise<Fruit[]> => {
   try {
-    const response = await axios.get("src/data/fruits.json");
-    return response.data;
+    //vite dynamic import
+    const fruits = await import('../data/fruits.json');
+    return fruits.default;
   } catch (error) {
     console.error("Error fetching fruits:", error);
     throw error;
