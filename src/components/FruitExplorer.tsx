@@ -38,7 +38,6 @@ export const FruitExplorer: React.FC<FruitExplorerProps> = ({
   const [groupBy, setGroupBy] = useState<GroupByOption>("None");
   const [viewType, setViewType] = useState<ViewType>("List");
 
-  // 错误处理
   if (error) {
     return (
       <Card className={`bg-red-50 ${className}`}>
@@ -53,7 +52,6 @@ export const FruitExplorer: React.FC<FruitExplorerProps> = ({
     setViewType((current) => (current === "List" ? "Table" : "List"));
   };
 
-  // 加载状态样式
   const contentStyles = isLoading ? "opacity-50 pointer-events-none" : "";
 
   return (
